@@ -1,0 +1,135 @@
+
+@layer utilities {
+  /* Base utility classes */
+  .glass {
+    @apply bg-white/80 backdrop-blur-lg shadow-md border border-white/40;
+  }
+  
+  .glass-dark {
+    @apply bg-black/30 backdrop-blur-lg shadow-md border border-white/10;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Enhanced gradient classes */
+  .bio-gradient {
+    @apply bg-gradient-to-r from-eco-50 to-eco-100 text-earth-900;
+  }
+  
+  .nature-card {
+    @apply bg-gradient-to-br from-eco-50 to-eco-100/50 backdrop-blur-sm border border-eco-200 shadow-md hover:shadow-lg transition-all duration-300;
+  }
+  
+  /* Button styles */
+  .eco-btn {
+    @apply bg-gradient-to-r from-eco-400 to-eco-300 text-earth-800 font-medium shadow-md hover:shadow-lg transition-all duration-300 rounded-md;
+  }
+  
+  .earth-bg {
+    @apply bg-gradient-to-b from-earth-700 via-earth-600 to-earth-500;
+  }
+  
+  /* Card and section styles */
+  .section-card {
+    @apply bg-white/90 backdrop-blur-md shadow-lg rounded-xl border border-eco-100 p-6 transition-all duration-300;
+  }
+  
+  .button-eco {
+    @apply inline-flex items-center justify-center rounded-full bg-gradient-to-r from-eco-500 to-eco-400 
+           text-earth-800 font-medium px-6 py-2.5 shadow-md hover:shadow-lg transform hover:-translate-y-1
+           transition-all duration-300 focus:ring-2 focus:ring-eco-300 focus:outline-none;
+  }
+
+  /* Section transitions */
+  .section-transition {
+    @apply transition-all duration-1000 ease-in-out;
+  }
+  
+  .section-enter {
+    @apply opacity-0 translate-y-10;
+  }
+  
+  .section-enter-active {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .section-exit {
+    @apply opacity-100;
+  }
+  
+  .section-exit-active {
+    @apply opacity-0 -translate-y-10;
+  }
+}
+
+/* Gradient utilities for consistent color schemes */
+@layer utilities {
+  .eco-gradient-light {
+    @apply bg-gradient-to-br from-white via-eco-50 to-eco-100;
+  }
+  
+  .eco-gradient-medium {
+    @apply bg-gradient-to-br from-eco-100 via-eco-200 to-eco-300;
+  }
+  
+  .eco-gradient-strong {
+    @apply bg-gradient-to-br from-eco-300 via-eco-400 to-eco-500;
+  }
+  
+  .sky-gradient-light {
+    @apply bg-gradient-to-br from-white via-sky-50 to-sky-100;
+  }
+  
+  .earth-gradient {
+    @apply bg-gradient-to-br from-earth-100 via-earth-200 to-earth-300;
+  }
+  
+  .glass-eco {
+    @apply bg-eco-50/80 backdrop-blur-sm border border-eco-100/50 shadow-sm;
+  }
+  
+  /* Consistent section gradients */
+  .section-gradient-light {
+    @apply bg-gradient-to-b from-white via-eco-50/30 to-eco-100/40;
+  }
+  
+  .section-gradient-earth {
+    @apply bg-gradient-to-b from-eco-50/70 via-eco-100/50 to-earth-100/30;
+  }
+}
+
+/* Enhanced component styles */
+.stats-card {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+}
+
+.counter-value {
+  font-variant-numeric: tabular-nums;
+  position: relative;
+  display: inline-flex;
+}
+
+.digit-slot {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 1.2em;
+  line-height: 1.2;
+}
+
+/* Enhanced button states for better accessibility */
+button:focus, a:focus {
+  outline: 2px solid rgba(113, 183, 7, 0.4);
+  outline-offset: 2px;
+}
+
+/* Consistent section transitions */
+section {
+  transition: background-color 0.8s ease, transform 0.5s ease;
+}
